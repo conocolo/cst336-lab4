@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
   res.render('index.html');
 });
 
+/* Route EJS template to handle multiple planets */
 app.get('/planet/:planet', homeController.respondWithPlanet);
 
 /* Start server */
