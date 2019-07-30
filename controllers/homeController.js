@@ -6,7 +6,8 @@ exports.respondWithPlanet = (req, res) => {
     let param = titleCase(req.params.planet);
     fs.readFile('public/text/' + req.params.planet + '.txt', 'utf8', (error, data) => {
         res.render("partials/planet", { planet: param,
-                                        text:   data} );
+                                        text:   data,
+                                        lowerCasedPlanet: req.params.planet} );
     });
 
 };
