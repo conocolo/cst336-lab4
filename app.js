@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
 app.get('/planet/:planet', homeController.respondWithPlanet);
 
 /* Start server */
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.listen(process.env.PORT, process.env.IP, function() {
+  console.log('Running express server');
 });
